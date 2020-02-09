@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bonansea.Futbol.Infraestructure.Data\Bonansea.Futbol.Infraestructure.Data.csproj" />
+    <ProjectReference Include="..\Bonansea.Futbol.Infraestructure.Interface\Bonansea.Futbol.Infraestructure.Interface.csproj" />
+    <ProjectReference Include="..\Bonansea.Futbol.Transversal.Common\Bonansea.Futbol.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

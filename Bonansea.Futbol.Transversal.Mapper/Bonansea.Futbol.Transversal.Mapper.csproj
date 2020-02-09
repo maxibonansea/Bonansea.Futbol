@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bonansea.Futbol.Application.DTO\Bonansea.Futbol.Application.DTO.csproj" />
+    <ProjectReference Include="..\Bonansea.Futbol.Domain.Entity\Bonansea.Futbol.Domain.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

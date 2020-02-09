@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bonansea.Futbol.Application.DTO\Bonansea.Futbol.Application.DTO.csproj" />
+    <ProjectReference Include="..\Bonansea.Futbol.Transversal.Common\Bonansea.Futbol.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>
