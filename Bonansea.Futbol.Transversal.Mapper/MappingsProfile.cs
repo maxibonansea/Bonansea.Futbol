@@ -1,7 +1,6 @@
-﻿using System;
-using AutoMapper;
-using Bonansea.Futbol.Domain.Entity;
+﻿using AutoMapper;
 using Bonansea.Futbol.Application.DTO;
+using Bonansea.Futbol.Domain.Entity;
 
 namespace Bonansea.Futbol.Transversal.Mapper
 {
@@ -11,6 +10,8 @@ namespace Bonansea.Futbol.Transversal.Mapper
         {
             //Mapeo cuando los Campos COINCIDEN en Nombre y Tipo entre todos los Objetos.
             CreateMap<Jugador, JugadorDto>().ReverseMap();
+            CreateMap<Equipo, EquipoDto>().ReverseMap();
+            CreateMap<Usuario, UsuarioDto>().ReverseMap();
 
             //Ejemplo: Mapeo cuando los Campos NO COINCIDEN en Nombre y Tipo entre todos los Objetos.
             //CreateMap<Jugador, JugadorDto>().ReverseMap()

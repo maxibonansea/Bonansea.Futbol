@@ -21,78 +21,78 @@ namespace Bonansea.Futbol.Infraestructure.Repository
 
         #region Métodos Síncronos
 
-        public bool Insert(Equipo jugador)
+        public bool Insert(Equipo equipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorInsert";
+            //    var query = "EquipoInsert";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", jugador.IdEquipo);
-            //    parameters.Add("Nombre", jugador.Nombre);
-            //    parameters.Add("Apellido", jugador.Apellido);
-            //    parameters.Add("FechaNacimiento", jugador.FechaNacimiento);
-            //    parameters.Add("Edad", jugador.Edad);
-            //    parameters.Add("Nacionalidad", jugador.Nacionalidad);
+            //    parameters.Add("IdEquipo", equipo.IdEquipo);
+            //    parameters.Add("Nombre", equipo.Nombre);
+            //    parameters.Add("Apellido", equipo.Apellido);
+            //    parameters.Add("FechaNacimiento", equipo.FechaNacimiento);
+            //    parameters.Add("Edad", equipo.Edad);
+            //    parameters.Add("Nacionalidad", equipo.Nacionalidad);
 
             //    var result = connection.Execute(query, param: parameters, commandType: CommandType.StoredProcedure);
             //    return result > 0;
             //}
         }
 
-        public bool Update(Jugador jugador)
+        public bool Update(Equipo equipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorUpdate";
+            //    var query = "EquipoUpdate";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", jugador.IdJugador);
-            //    parameters.Add("Nombre", jugador.Nombre);
-            //    parameters.Add("Apellido", jugador.Apellido);
-            //    parameters.Add("FechaNacimiento", jugador.FechaNacimiento);
-            //    parameters.Add("Edad", jugador.Edad);
-            //    parameters.Add("Nacionalidad", jugador.Nacionalidad);
+            //    parameters.Add("IdEquipo", equipo.IdEquipo);
+            //    parameters.Add("Nombre", equipo.Nombre);
+            //    parameters.Add("Apellido", equipo.Apellido);
+            //    parameters.Add("FechaNacimiento", equipo.FechaNacimiento);
+            //    parameters.Add("Edad", equipo.Edad);
+            //    parameters.Add("Nacionalidad", equipo.Nacionalidad);
 
             //    var result = connection.Execute(query, param: parameters, commandType: CommandType.StoredProcedure);
             //    return result > 0;
             //}
         }
 
-        public bool Delete(int idJugador)
+        public bool Delete(int idEquipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorDelete";
+            //    var query = "EquipoDelete";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", idJugador);
+            //    parameters.Add("IdEquipo", idEquipo);
             //    var result = connection.Execute(query, param: parameters, commandType: CommandType.StoredProcedure);
             //    return result > 0;
             //}
         }
 
-        public Jugador Get(int idJugador)
+        public Equipo Get(int idEquipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorGetById";
+            //    var query = "EquipoGetById";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", idJugador);
-            //    var jugador = connection.QuerySingle<Jugador>(query, param: parameters, commandType: CommandType.StoredProcedure);
-            //    return jugador;
+            //    parameters.Add("IdEquipo", idEquipo);
+            //    var equipo = connection.QuerySingle<Equipo>(query, param: parameters, commandType: CommandType.StoredProcedure);
+            //    return equipo;
             //}
         }
 
-        public IEnumerable<Jugador> GetAll()
+        public IEnumerable<Equipo> GetAll()
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorList";
-            //    var jugadores = connection.Query<Jugador>(query, commandType: CommandType.StoredProcedure);
-            //    return jugadores;
+            //    var query = "EquipoList";
+            //    var equipoes = connection.Query<Equipo>(query, commandType: CommandType.StoredProcedure);
+            //    return equipoes;
             //}
         }
 
@@ -100,78 +100,78 @@ namespace Bonansea.Futbol.Infraestructure.Repository
 
         #region Métodos Asíncronos
 
-        public async Task<bool> InsertAsync(Jugador jugador)
+        public async Task<bool> InsertAsync(Equipo equipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorInsert";
+            //    var query = "EquipoInsert";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", jugador.IdJugador);
-            //    parameters.Add("Nombre", jugador.Nombre);
-            //    parameters.Add("Apellido", jugador.Apellido);
-            //    parameters.Add("FechaNacimiento", jugador.FechaNacimiento);
-            //    parameters.Add("Edad", jugador.Edad);
-            //    parameters.Add("Nacionalidad", jugador.Nacionalidad);
+            //    parameters.Add("IdEquipo", equipo.IdEquipo);
+            //    parameters.Add("Nombre", equipo.Nombre);
+            //    parameters.Add("Apellido", equipo.Apellido);
+            //    parameters.Add("FechaNacimiento", equipo.FechaNacimiento);
+            //    parameters.Add("Edad", equipo.Edad);
+            //    parameters.Add("Nacionalidad", equipo.Nacionalidad);
 
             //    var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
             //    return result > 0;
             //}
         }
 
-        public async Task<bool> UpdateAsync(Jugador jugador)
+        public async Task<bool> UpdateAsync(Equipo equipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorUpdate";
+            //    var query = "EquipoUpdate";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", jugador.IdJugador);
-            //    parameters.Add("Nombre", jugador.Nombre);
-            //    parameters.Add("Apellido", jugador.Apellido);
-            //    parameters.Add("FechaNacimiento", jugador.FechaNacimiento);
-            //    parameters.Add("Edad", jugador.Edad);
-            //    parameters.Add("Nacionalidad", jugador.Nacionalidad);
+            //    parameters.Add("IdEquipo", equipo.IdEquipo);
+            //    parameters.Add("Nombre", equipo.Nombre);
+            //    parameters.Add("Apellido", equipo.Apellido);
+            //    parameters.Add("FechaNacimiento", equipo.FechaNacimiento);
+            //    parameters.Add("Edad", equipo.Edad);
+            //    parameters.Add("Nacionalidad", equipo.Nacionalidad);
 
             //    var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
             //    return result > 0;
             //}
         }
 
-        public async Task<bool> DeleteAsync(int idJugador)
+        public async Task<bool> DeleteAsync(int idEquipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorDelete";
+            //    var query = "EquipoDelete";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", idJugador);
+            //    parameters.Add("IdEquipo", idEquipo);
             //    var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
             //    return result > 0;
             //}
         }
 
-        public async Task<Jugador> GetAsync(int idJugador)
+        public async Task<Equipo> GetAsync(int idEquipo)
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorGetById";
+            //    var query = "EquipoGetById";
             //    var parameters = new DynamicParameters();
-            //    parameters.Add("IdJugador", idJugador);
-            //    var jugador = await connection.QuerySingleAsync<Jugador>(query, param: parameters, commandType: CommandType.StoredProcedure);
-            //    return jugador;
+            //    parameters.Add("IdEquipo", idEquipo);
+            //    var equipo = await connection.QuerySingleAsync<Equipo>(query, param: parameters, commandType: CommandType.StoredProcedure);
+            //    return equipo;
             //}
         }
 
-        public async Task<IEnumerable<Jugador>> GetAllAsync()
+        public async Task<IEnumerable<Equipo>> GetAllAsync()
         {
             throw new NotImplementedException();
             //using (var connection = _connetionFactory.GetConnection)
             //{
-            //    var query = "JugadorList";
-            //    var jugadores = await connection.QueryAsync<Jugador>(query, commandType: CommandType.StoredProcedure);
-            //    return jugadores;
+            //    var query = "EquipoList";
+            //    var equipoes = await connection.QueryAsync<Equipo>(query, commandType: CommandType.StoredProcedure);
+            //    return equipoes;
             //}
         }
 

@@ -1,9 +1,8 @@
-﻿using System;
-using Bonansea.Futbol.Domain.Entity;
+﻿using Bonansea.Futbol.Domain.Entity;
 using Bonansea.Futbol.Domain.Interface;
 using Bonansea.Futbol.Infraestructure.Interface;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Bonansea.Futbol.Domain.Core
 {

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Bonansea.Futbol.Application.DTO;
+﻿using Bonansea.Futbol.Application.DTO;
 using Bonansea.Futbol.Transversal.Common;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Bonansea.Futbol.Application.Interface
 {

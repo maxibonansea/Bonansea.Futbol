@@ -16,7 +16,7 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
     [Authorize]
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class UsuarioController : Controller
+    public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioApplication _usuarioApplication;
         private readonly AppSettings _appSettings;
@@ -47,22 +47,29 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
 
         private string BuildToken(Response<UsuarioDto> UsuarioDto)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-            var tokenDescriptor = new SecurityTokenDescriptor
+            try
             {
-                Subject = new ClaimsIdentity(new Claim[]
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+                var tokenDescriptor = new SecurityTokenDescriptor
                 {
+                    Subject = new ClaimsIdentity(new Claim[]
+                    {
                     new Claim(ClaimTypes.Name, UsuarioDto.Data.IdUsuario.ToString())
-                }),
-                Expires = DateTime.UtcNow.AddMinutes(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = _appSettings.Issuer,
-                Audience = _appSettings.Audience
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
-            return tokenString;
+                    }),
+                    Expires = DateTime.UtcNow.AddMinutes(2),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                    Issuer = _appSettings.Issuer,
+                    Audience = _appSettings.Audience
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                var tokenString = tokenHandler.WriteToken(token);
+                return tokenString;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

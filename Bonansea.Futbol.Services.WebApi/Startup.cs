@@ -66,19 +66,33 @@ namespace Bonansea.Futbol.Services.WebApi
             //Configuración con JWT Authentication
             var appSettings = appSettingsSection.Get<AppSettings>();
 
-            //Inyección de Dependencias:
+        //Inyección de Dependencias:
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IConnetionFactory, ConnectionFactory>();
+            
+            //Jugador
             services.AddScoped<IJugadorApplication, JugadorApplication>();
             services.AddScoped<IJugadorDomain, JugadorDomain>();
             if (_configurationRepository == "database")
                 services.AddScoped<IJugadorRepository, JugadorRepository>();
             else
                 services.AddScoped<IJugadorRepository, JugadorRepositoryDemo>();
+            
+            //Usuario
             services.AddScoped<IUsuarioApplication, UsuarioApplication>();
             services.AddScoped<IUsuarioDomain, UsuarioDomain>();
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            if (_configurationRepository == "database")
+                services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            else
+                services.AddScoped<IUsuarioRepository, UsuarioRepositoryDemo>();
+            
+            //Equipo
+            services.AddScoped<IEquipoApplication, EquipoApplication>();
+            services.AddScoped<IEquipoDomain, EquipoDomain>();
+            services.AddScoped<IEquipoRepository, EquipoRepository>();
+
             services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
+                
 
             //Variables de Autenticación
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);

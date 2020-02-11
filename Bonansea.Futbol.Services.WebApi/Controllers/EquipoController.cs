@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace Bonansea.Futbol.Services.WebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class JugadorController : ControllerBase
+    public class EquipoController : ControllerBase
     {
-        private readonly IJugadorApplication _jugadorApplication;
+        private readonly IEquipoApplication _equipoApplication;
 
-        public JugadorController(IJugadorApplication jugadorApplication)
+        public EquipoController(IEquipoApplication equipoApplication)
         {
-            _jugadorApplication = jugadorApplication;
+            _equipoApplication = equipoApplication;
         }
 
         #region "Métodos Síncronos"
 
         [HttpPost]
-        public IActionResult Insert([FromBody]JugadorDto jugadorDto)
+        public IActionResult Insert([FromBody]EquipoDto equipoDto)
         {
-            if (jugadorDto == null)
+            if (equipoDto == null)
                 return BadRequest();
 
-            var response = _jugadorApplication.Insert(jugadorDto);
+            var response = _equipoApplication.Insert(equipoDto);
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -34,38 +34,38 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody]JugadorDto jugadorDto)
+        public IActionResult Update([FromBody]EquipoDto equipoDto)
         {
-            if (jugadorDto == null)
+            if (equipoDto == null)
                 return BadRequest();
 
-            var response = _jugadorApplication.Update(jugadorDto);
+            var response = _equipoApplication.Update(equipoDto);
             if (response.IsSuccess)
                 return Ok(response);
 
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{IdJugador}")]
-        public IActionResult Delete(int IdJugador)
+        [HttpDelete("{IdEquipo}")]
+        public IActionResult Delete(int IdEquipo)
         {
-            if (IdJugador == 0)
+            if (IdEquipo == 0)
                 return BadRequest();
 
-            var response = _jugadorApplication.Delete(IdJugador);
+            var response = _equipoApplication.Delete(IdEquipo);
             if (response.IsSuccess)
                 return Ok(response);
 
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{IdJugador}")]
-        public IActionResult Get(int IdJugador)
+        [HttpGet("{IdEquipo}")]
+        public IActionResult Get(int IdEquipo)
         {
-            if (IdJugador == 0)
+            if (IdEquipo == 0)
                 return BadRequest();
 
-            var response = _jugadorApplication.Get(IdJugador);
+            var response = _equipoApplication.Get(IdEquipo);
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -75,7 +75,7 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var response = _jugadorApplication.GetAll();
+            var response = _equipoApplication.GetAll();
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -87,12 +87,12 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
         #region "Métodos Asíncronos"
 
         [HttpPost]
-        public async Task<IActionResult> InsertAsync([FromBody]JugadorDto jugadorDto)
+        public async Task<IActionResult> InsertAsync([FromBody]EquipoDto equipoDto)
         {
-            if (jugadorDto == null)
+            if (equipoDto == null)
                 return BadRequest();
 
-            var response = await _jugadorApplication.InsertAsync(jugadorDto);
+            var response = await _equipoApplication.InsertAsync(equipoDto);
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -100,38 +100,38 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAsync([FromBody]JugadorDto jugadorDto)
+        public async Task<IActionResult> UpdateAsync([FromBody]EquipoDto equipoDto)
         {
-            if (jugadorDto == null)
+            if (equipoDto == null)
                 return BadRequest();
 
-            var response = await _jugadorApplication.UpdateAsync(jugadorDto);
+            var response = await _equipoApplication.UpdateAsync(equipoDto);
             if (response.IsSuccess)
                 return Ok(response);
 
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{IdJugador}")]
-        public async Task<IActionResult> DeleteAsync(int IdJugador)
+        [HttpDelete("{IdEquipo}")]
+        public async Task<IActionResult> DeleteAsync(int IdEquipo)
         {
-            if (IdJugador == 0)
+            if (IdEquipo == 0)
                 return BadRequest();
 
-            var response = await _jugadorApplication.DeleteAsync(IdJugador);
+            var response = await _equipoApplication.DeleteAsync(IdEquipo);
             if (response.IsSuccess)
                 return Ok(response);
 
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{IdJugador}")]
-        public async Task<IActionResult> GetAsync(int IdJugador)
+        [HttpGet("{IdEquipo}")]
+        public async Task<IActionResult> GetAsync(int IdEquipo)
         {
-            if (IdJugador == 0)
+            if (IdEquipo == 0)
                 return BadRequest();
 
-            var response = await _jugadorApplication.GetAsync(IdJugador);
+            var response = await _equipoApplication.GetAsync(IdEquipo);
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -141,7 +141,7 @@ namespace Bonansea.Futbol.Services.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllAsync()
         {
-            var response = await _jugadorApplication.GetAllAsync();
+            var response = await _equipoApplication.GetAllAsync();
             if (response.IsSuccess)
                 return Ok(response);
 

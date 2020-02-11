@@ -1,12 +1,10 @@
-﻿using System;
-using Bonansea.Futbol.Domain.Entity;
+﻿using Bonansea.Futbol.Domain.Entity;
 using Bonansea.Futbol.Infraestructure.Interface;
 using Bonansea.Futbol.Transversal.Common;
 using Dapper;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
 
 namespace Bonansea.Futbol.Infraestructure.Repository
 {

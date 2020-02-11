@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Bonansea.Futbol.Domain.Entity;
 using System.Collections.Generic;
-using System.Text;
-using Bonansea.Futbol.Domain.Entity;
 using System.Threading.Tasks;
 
 namespace Bonansea.Futbol.Domain.Interface

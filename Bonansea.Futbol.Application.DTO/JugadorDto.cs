@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Bonansea.Futbol.Application.DTO
+﻿namespace Bonansea.Futbol.Application.DTO
 {
     public class JugadorDto
     {
