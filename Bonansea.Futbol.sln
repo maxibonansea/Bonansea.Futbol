@@ -37,7 +37,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bonansea.Futbol.Application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bonansea.Futbol.Services.WebApi", "Bonansea.Futbol.Services.WebApi\Bonansea.Futbol.Services.WebApi.csproj", "{494D4B41-BFDE-45D9-8B5A-7373E1E3565F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonansea.Futbol.Transversal.Logging", "Bonansea.Futbol.Transversal.Logging\Bonansea.Futbol.Transversal.Logging.csproj", "{A84B7848-97F1-4462-BEEE-D6AE7D42A8C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bonansea.Futbol.Transversal.Logging", "Bonansea.Futbol.Transversal.Logging\Bonansea.Futbol.Transversal.Logging.csproj", "{A84B7848-97F1-4462-BEEE-D6AE7D42A8C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{FFDDD976-3FFA-4248-80A5-583A7BEB3C8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bonansea.Futbol.UnitTests", "Bonansea.Futbol.UnitTests\Bonansea.Futbol.UnitTests.csproj", "{4E2E0202-3803-42E6-92B6-A5CA7B705086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonansea.Futbol.Domian.CommonEntity", "Bonansea.Futbol.Domian.CommonEntity\Bonansea.Futbol.Domian.CommonEntity.csproj", "{7AF4CDB9-840B-422C-B4D8-7E8540AA8855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +103,14 @@ Global
 		{A84B7848-97F1-4462-BEEE-D6AE7D42A8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A84B7848-97F1-4462-BEEE-D6AE7D42A8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A84B7848-97F1-4462-BEEE-D6AE7D42A8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2E0202-3803-42E6-92B6-A5CA7B705086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2E0202-3803-42E6-92B6-A5CA7B705086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2E0202-3803-42E6-92B6-A5CA7B705086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2E0202-3803-42E6-92B6-A5CA7B705086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF4CDB9-840B-422C-B4D8-7E8540AA8855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF4CDB9-840B-422C-B4D8-7E8540AA8855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF4CDB9-840B-422C-B4D8-7E8540AA8855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF4CDB9-840B-422C-B4D8-7E8540AA8855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +129,8 @@ Global
 		{20D170F6-7C41-4635-A995-21D49DDB5839} = {E19316D9-5480-4344-9228-12F759EB0D3D}
 		{494D4B41-BFDE-45D9-8B5A-7373E1E3565F} = {A9AA5C86-2A2A-4AD3-AD1D-D71032B80CBF}
 		{A84B7848-97F1-4462-BEEE-D6AE7D42A8C4} = {A86EDDC5-FB1E-4CE3-8F9A-D40D848DA377}
+		{4E2E0202-3803-42E6-92B6-A5CA7B705086} = {FFDDD976-3FFA-4248-80A5-583A7BEB3C8B}
+		{7AF4CDB9-840B-422C-B4D8-7E8540AA8855} = {84A5F9B7-961C-47E4-AADE-C6F8B6977534}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3461858-C47A-492C-9857-304B379C87F0}

@@ -3,6 +3,7 @@ using Bonansea.Futbol.Infraestructure.Interface;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Bonansea.Futbol.Infraestructure.Repository
 {
@@ -45,17 +46,54 @@ namespace Bonansea.Futbol.Infraestructure.Repository
 
         public bool Insert(Jugador jugador)
         {
-            throw new NotImplementedException();
+            if (jugador != null) {
+                var _idJugadorLast = _listJugadores.Max(x => x.IdJugador);
+                jugador.IdJugador = _idJugadorLast + 1;
+                _listJugadores.Add(jugador);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //throw new NotImplementedException();
         }
 
         public bool Update(Jugador jugador)
         {
-            throw new NotImplementedException();
+            if (jugador != null)
+            {
+                var jugadorUpdate = _listJugadores.Find(x => x.IdJugador == jugador.IdJugador);
+                if (jugadorUpdate != null)
+                {
+                    //_listJugadores.Remove(jugadorUpdate);
+                    jugadorUpdate = jugador;
+                }
+                else
+                {
+                    return false;
+                }
+                //_listJugadores.Add(jugador);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //throw new NotImplementedException();
         }
 
         public bool Delete(int idJugador)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            var jugador = _listJugadores.Find(x => x.IdJugador == idJugador);
+            if (jugador != null)
+            {
+                _listJugadores.Remove(new Jugador { IdJugador = idJugador });
+                return true;
+            }
+            return false;
+                
         }
 
         public Jugador Get(int idJugador)

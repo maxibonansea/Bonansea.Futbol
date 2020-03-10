@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bonansea.Futbol.Services.WebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class JugadorController : ControllerBase
